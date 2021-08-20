@@ -32,7 +32,7 @@
                 <li><a href="#">Dev Team</a></li>
                 <li><a href="#">Contact US</a></li>
                 <li><a class="LoginButton" href="login.php"><button>Sign In</button></a></li>
-                <li><a class="LoginButton" href="#"><button>Sign Up</button></a></li>
+                <li><a class="LoginButton" href="register.php"><button>Sign Up</button></a></li>
             </ul>
         </nav>    
     </header>
