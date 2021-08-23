@@ -26,9 +26,9 @@
                 <span class="bar"></span>
             </a>
             <ul class="nav_links">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="project.php">Projects</a></li>
                 <li><a href="#">Dev Team</a></li>
                 <li><a href="#">Contact US</a></li>
                 <li><a class="LoginButton" href="login.php"><button>Sign In</button></a></li>
