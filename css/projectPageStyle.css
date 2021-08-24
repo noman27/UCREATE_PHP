@@ -4,7 +4,25 @@
     margin-top: 30px;
 }
 
-.container{
+.Midbody .container{
     margin-top: 50px;
     padding: 30px;
+}
+
+.Midbody .container .row{
+    padding: 30px;
+}
+
+.itemBox{
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+}
+
+.clickHere{
+    border-radius: 0;
+    background-color: #e84393;
+    
 }
