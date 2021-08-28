@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" >   
     <link rel = "icon" type = "images/png" href = "images/logo_icon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/aboutStyle.css">
     <link rel="stylesheet" href="css/f_style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     
 
      
 </head>
-        
+
 <body>
     <header>
-        <img class="topLogo" src="images/logo3.png" alt="">
+    <img class="topLogo" src="images/logo3.png" alt="">
         <nav>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
@@ -34,39 +35,66 @@
                 <li><a class="LoginButton" href="login.php"><button>Sign In</button></a></li>
                 <li><a class="LoginButton" href="register.php"><button>Sign Up</button></a></li>
             </ul>
-        </nav>    
+        </nav>
     </header>
-<!---------------------------------------------->
+
+    <!---------------------------------------------------------------------->
+
+    <div class="third">
+		<div class="container">			
+			<div class="row">						
+				<div class="col-md-4">
+					<div class="grid">		
+						<div class="grid1">			
+							<h4 style="font-size:28px; font-weight:700;">About Us</h4>
+							<p style="font-size:19px; font-weight:500;">Good content is everything.In a world that is oversaturated with content,you'll learn from successfull writers and bloggers how to create content that matters and resonates with your audiences</p>
+						</div>
+					</div>
+				</div> 					
+				<div class="col-md-4">
+					<div class="grid">			
+						<div class="grid2">
+						</div>
+					</div>
+				</div> 						
+				<div class="col-md-4">
+					<div class="grid">
+						<div class="grid3">	
+							<h4 style="font-size:28px; font-weight:700;">Our Strategy</h4>
+							<p style="font-size:19px; font-weight:500;">Sometimes the hardest part is knowing what to say and when to say it.At Lines,you'll get the downlow on how to craft retweetable massages,when to post content,and what platforms you should be using</p>
+						</div>
+					</div>
+				</div> 						
+				<div class="col-md-4">
+					<div class="grid">			
+						<div class="grid4">	
+						</div>
+					</div>
+				</div> 					
+				<div class="col-md-4">
+					<div class="grid">			
+						<div class="grid5">	
+							<h4 style="font-size:28px; font-weight:700;">Our Mission</h4>
+							<p style="font-size:19px; font-weight:500;">Good content is everything.In a world that is oversaturated with content,you'll learn from successfull writers and bloggers how to create content that matters and resonates with your audiences</p>
+						</div>
+					</div>
+				</div> 							
+				<div class="col-md-4">
+					<div class="grid">			
+						<div class="grid6">		
+						</div>
+					</div>
+				</div> 				
+			</div>	
+		</div>
+	</div>
 
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <?php echo "Nigger?"?>
 
 
 
 
-<!----------------------------------------------->
+
 
     <footer class="footer"> 
         <div class="container">
@@ -105,7 +133,7 @@
 		</div>
     </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

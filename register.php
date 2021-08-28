@@ -26,8 +26,8 @@
                     <input type="email" placeholder="Enter your email" required>
                 </div>
                 <div class="input-box">
-                    <span class="details">Skill</span>
-                    <input type="text" placeholder="What kind of skill you have?" required>
+                    <span class="details">Profession</span>
+                    <input type="text" placeholder="What's your profession?" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>

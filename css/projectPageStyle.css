@@ -17,12 +17,16 @@
     border: 5px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-bottom: 40px;
-    padding-top: 20px;
-    padding-bottom: 150px;
+    /*padding: 20px;*/
+    padding: 50px;
+}
+
+.itemBox img{
+    background: transparent;
 }
 
 .clickHere{
     border-radius: 0;
     background-color: #e84393;
-    
+    margin-top: 20px;   
 }

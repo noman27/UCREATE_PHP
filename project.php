@@ -43,20 +43,23 @@
                     <div class="itemBox">
                         <h5 class="subjectTitle">Software development</h3>
                         <p class="description">Softwares developed in C++,Java,Python,C# and other languages</p>
+                        <img src="images/progIcon3.png" alt="coding">
                         <Button class="clickHere">Click Here</Button>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="itemBox">
                         <h5 class="subjectTitle">Hardware and Robotics</h3>
-                        <p class="description">Devices and Robots created by <br> talented hardware engineers</p>
+                        <p class="description">Devices and Robots created by talented hardware engineers</p>
+                        <img src="images/hardware4.png" alt="roboticsnhard">
                         <Button class="clickHere">Click Here</Button>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="itemBox">
                         <h5 class="subjectTitle">Arts</h3>
-                        <p class="description">Paintings,sculptures and <br> other unique creations</p>
+                        <p class="description">Paintings,sculptures,short stories,novels, comics <br> and <br> other unique creations</p>
+                        <img src="images/arts3.png" alt="arts">
                         <Button class="clickHere">Click Here</Button>
                     </div>
                 </div>   
