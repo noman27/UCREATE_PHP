@@ -35,8 +35,8 @@
     </header>
 
     <div class="Midbody">
-        <h3>PROJECTS</h3>
-        <p>Here is the collection of projects from Software/Hardware development to Arts</p>
+        <h1 class="titles">PROJECTS</h1>
+        <p class="titles">Here is the collection of projects from Software/Hardware development to Arts</p>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -76,7 +76,7 @@
                 <div class="footer-col">
                     <h4>company</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
+                        <li><a href="About.php">about us</a></li>
                         <li><a href="#">our services</a></li>
                         <li><a href="#">privacy policy</a></li>
                         <li><a href="#">affiliate program</a></li>

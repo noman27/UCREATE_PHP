@@ -10,6 +10,7 @@
     <link rel = "icon" type = "images/png" href = "images/logo_icon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/f_style.css">
+    <link rel="stylesheet" href="css/indexStyle.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     
 
@@ -42,13 +43,15 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">
+                <h1 class="MidBannerTitle">GET NEW IDEAS AND SHARE IDEAS</h1>
+                <button class="learnMore">Learn More</button>
             </div>
             <div class="carousel-item">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -77,7 +80,7 @@
                 <div class="footer-col">
                     <h4>company</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
+                        <li><a href="About.php">about us</a></li>
                         <li><a href="#">our services</a></li>
                         <li><a href="#">privacy policy</a></li>
                         <li><a href="#">affiliate program</a></li>
