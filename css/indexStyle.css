@@ -12,11 +12,17 @@
 
 .learnMore{
     text-align: center;
-    display: flex;
-    align-items: center;
-    top: 50%;
-    justify-content: center;
-    border-radius: 0;
-    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     background-color: white;
+    border-radius: 0px;
+    font-weight: 650;
+}
+
+.learnMore :hover{
+    color: rgb(255, 255, 255);
 }

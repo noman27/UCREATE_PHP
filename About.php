@@ -19,7 +19,7 @@
 
 <body>
     <header>
-    <img class="topLogo" src="images/logo3.png" alt="">
+    <img class="topLogo" src="images/logo1.png" alt="">
         <nav>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>

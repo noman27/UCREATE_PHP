@@ -19,7 +19,7 @@
         
 <body>
     <header>
-        <img class="topLogo" src="images/logo3.png" alt="">
+        <img class="topLogo" src="images/logo1.png" alt="">
         <nav>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
@@ -43,12 +43,12 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">
+                <img src="images/welcome2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">
                 <h1 class="MidBannerTitle">GET NEW IDEAS AND SHARE IDEAS</h1>
-                <button class="learnMore">Learn More</button>
+                <button class="learnMore">LEARN MORE</button>
             </div>
             <div class="carousel-item">
                 <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">
