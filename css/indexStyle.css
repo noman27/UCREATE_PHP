@@ -1,4 +1,29 @@
 
+.welcomeTitle{
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.motto{
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 5px;
+    transition: all 0.3s ease 0s;
+}
 .MidBannerTitle{
     position: absolute;
     text-align: center;
@@ -18,9 +43,19 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 0px;
     font-weight: 650;
+    color: rgb(0, 0, 0);
+}
+
+.welcomeTitle:hover{
+    color: #079992;
+}
+
+.motto:hover{
+    color: #9980FA;
+    letter-spacing: 9px;
 }
 
 .learnMore :hover{

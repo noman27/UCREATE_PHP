@@ -44,6 +44,8 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/welcome2.png" class="d-block w-100" alt="...">
+                <h1 class="welcomeTitle">U-CREATE</h1>
+                <P  class="motto">Let the world know your talent</P>
             </div>
             <div class="carousel-item">
                 <img src="images/Welcome_Ideas.png" class="d-block w-100" alt="...">

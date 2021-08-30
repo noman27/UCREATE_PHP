@@ -24,7 +24,7 @@
             </a>
             <ul class="nav_links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="About.php">About</a></li>
                 <li><a href="project.php">Projects</a></li>
                 <li><a href="#">Dev Team</a></li>
                 <li><a href="contactUs.php">Contact US</a></li>
