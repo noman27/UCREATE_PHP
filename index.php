@@ -30,7 +30,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="About.php">About</a></li>
                 <li><a href="project.php">Projects</a></li>
-                <li><a href="#">Dev Team</a></li>
+                <li><a href="devTeam.php">Dev Team</a></li>
                 <li><a href="contactUs.php">Contact US</a></li>
                 <li><a class="LoginButton" href="login.php"><button>Sign In</button></a></li>
                 <li><a class="LoginButton" href="register.php"><button>Sign Up</button></a></li>
@@ -68,7 +68,9 @@
 
     <?php echo "Nigger?"?>
 
-
+    <div>
+        
+    </div>
 
 
 <!----------------------------------------------->

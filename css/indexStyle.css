@@ -47,6 +47,7 @@
     border-radius: 0px;
     font-weight: 650;
     color: rgb(0, 0, 0);
+    transition: all 0.3s ease 0s;
 }
 
 .welcomeTitle:hover{
@@ -58,6 +59,6 @@
     letter-spacing: 9px;
 }
 
-.learnMore :hover{
-    color: rgb(255, 255, 255);
+.learnMore:hover{
+    color: #FFFFFF
 }

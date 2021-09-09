@@ -50,5 +50,6 @@ body{
     border-radius: 0;
     background-color: #e84393;
     margin-top: 20px;
-    font-weight: 600;   
+    font-weight: 600;
+    color: rgb(0, 0, 0);   
 }
