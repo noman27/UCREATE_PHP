@@ -17,7 +17,7 @@
 li,a,button{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -83,7 +83,7 @@ button:hover{
 .toggle-button .bar{
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
 }
 
