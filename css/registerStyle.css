@@ -73,12 +73,12 @@ form .user-details .input-box{
     border-color: #9b59b6;
 }
 
-form .regbtn{
+.regbtn{
     height: 45px;
     margin: 45px 0;
 }
 
-form .regbtn input{
+.regbtn input{
     height      : 100%;
     width       : 100%;
     outline     : none;
@@ -91,6 +91,6 @@ form .regbtn input{
     background  : linear-gradient(135deg, #71b7e6 ,#9b59b6);
 }
 
-form .regbtn input:hover{
+.regbtn input:hover{
     background  : linear-gradient(-135deg, #71b7e6 ,#9b59b6);
 }
