@@ -11,7 +11,14 @@
                 <li><a href="project.php">Projects</a></li>
                 <li><a href="devTeam.php">Dev Team</a></li>
                 <li><a href="contactUs.php">Contact US</a></li>
-                <li><a class="LoginButton" href="login.php"><button>Sign In</button></a></li>
-                <li><a class="LoginButton" href="register.php"><button>Sign Up</button></a></li>
+                <?php 
+                    if(isset($_SESSION['UserID'])){
+                        echo "<li><?php include 'profileOptions.php'; ?></li>";
+                    }
+                    else{
+                        echo "<li><a class='LoginButton' href='login.php'><button>Sign In</button></a></li>";
+                        echo "<li><a class='LoginButton' href='register.php'><button>Sign Up</button></a></li>";
+                    } 
+                ?>
             </ul>
         </nav>
