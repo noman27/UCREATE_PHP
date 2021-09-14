@@ -17,24 +17,8 @@
 <body style="background: rgb(224, 221, 8);">
 
     <header>
-        <img class="topLogo" src="images/logo3.png" alt="">
-            <nav>
-                <a href="#" class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
-                <ul class="nav_links">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="project.php">Projects</a></li>
-                    <li><a href="devTeam.php">Dev Team</a></li>
-                    <li><a href="#">Contact US</a></li>
-                    <li><a class="LoginButton" href="login.php"><button>Sign In</button></a></li>
-                    <li><a class="LoginButton" href="register.php"><button>Sign Up</button></a></li>
-                </ul>
-            </nav>
-        </header>
+    <?php include 'header.php'; ?>
+    </header>
     
 
 
