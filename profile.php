@@ -28,7 +28,7 @@ session_start();
         <div class="container">
             <div class="profile-header">
                 <div class="profile-pic">
-                    <img src="images/profilepic.jpg" alt="" height="150px" width="150px">
+                    <img src="images/img2.png" alt="" height="150px" width="150px">
                 </div>
                 <div class="profileUsername">
                     <?php echo "<h3>$userName</h3>"; ?>  

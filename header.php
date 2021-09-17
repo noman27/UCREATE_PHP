@@ -13,7 +13,8 @@
                 <li><a href="contactUs.php">Contact US</a></li>
                 <?php 
                     if(isset($_SESSION['UserID'])){
-                        echo "<li><?php include 'profileOptions.php'; ?></li>";
+                        
+                        include 'profileOptions.php';
                     }
                     else{
                         echo "<li><a class='LoginButton' href='login.php'><button>Sign In</button></a></li>";

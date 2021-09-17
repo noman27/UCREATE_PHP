@@ -28,7 +28,7 @@
                         <h5 class="subjectTitle">Software development</h3>
                         <p class="description">Softwares developed in C++,Java,Python,C# and other languages</p>
                         <img src="images/progIcon3.png" alt="coding">
-                        <Button class="clickHere">Click Here</Button>
+                        <a href="softThumbnill.php"><Button class="clickHere">Click Here</Button></a>
                     </div>
                 </div>
                 <div class="col-md-4">
