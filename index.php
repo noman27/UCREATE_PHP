@@ -121,7 +121,7 @@ session_start();
                         <li><a href="About.php">about us</a></li>
                         <li><a href="#">our services</a></li>
                         <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="softUpload.php">affiliate program</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
