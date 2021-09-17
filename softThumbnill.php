@@ -39,7 +39,7 @@
         </nav>
     </header>
 	
-
+<!--------------------------->
 <div class="midbody">
 	<div class ="text-container">
 		<div class = "text-animation"
