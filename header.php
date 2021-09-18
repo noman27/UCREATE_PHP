@@ -14,7 +14,9 @@
                 <?php 
                     if(isset($_SESSION['UserID'])){
                         
-                        include 'profileOptions.php';
+                        //include 'profileOptions.php';
+                        echo "<li><a class='LoginButton' href='profile.php'><button>Profile</button></a></li>";
+                        echo "<li><a class='LoginButton' href='logout.php'><button>Log Out</button></a></li>";
                     }
                     else{
                         echo "<li><a class='LoginButton' href='login.php'><button>Sign In</button></a></li>";

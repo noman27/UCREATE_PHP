@@ -1,12 +1,22 @@
 <?php 
 session_start();
+    include 'connect.php';
+    include 'function.php';
+    
+    $id='';
     $userName='';
     $profession='';
     $links='';
     $Bio='';
 
     if(isset($_SESSION['UserID'])){
+        $id=$_SESSION['UserID'];
+        // profileDataGet($con,$id);
 
+        // $userName=$users["UserName"];
+        // $profession=$users["Profession"];
+        // $Bio=$profils["Bio"];
+        // $links=$linkss["Link"];
     }
     else{
         $userName='User Name';

@@ -11,26 +11,36 @@ include ("function.php");
         $fullName   = $_POST['fullName'];
         $userName   = $_POST['userName'];
         $uEmail     = $_POST['userEmail'];
-        $password   = $_POST['userPass'];
-        $cpassword  = $_POST['finalPass'];
+        $password   = md5($_POST['userPass']);
+        $cpassword  = md5($_POST['finalPass']) ;
         $profession = $_POST['profession'];
 
         if(!empty($fullName)  && !empty($userName) && !empty($uEmail) && !empty($password) && !empty($cpassword) && !empty($profession)){
             if($password==$cpassword){
                 //echo "Noice";
-                
-                $ID=IdGenarate();
-                
-                $query="INSERT INTO users(UserID, Name, UserName, Email, Password, Profession) VALUES ('$ID','$fullName','$userName','$uEmail','$cpassword','$profession') ";
+                if(uidExists($con,$userName,$uEmail)==false){    
+                    $ID=IdGenarate();
+                    $prID=profIdGenarate();
+                    $LinkID=LinkIdGenarate();
 
-                mysqli_query($con,$query);
+                    $query="INSERT INTO users(UserID, Name, UserName, Email, Password, Profession) VALUES ('$ID','$fullName','$userName','$uEmail','$cpassword','$profession') ";
+                    $query2="INSERT INTO profile(ProfileID, UserID, Bio, ProfPicLink) VALUES ('$prID','$ID','Add Bio','Add profile')";
+                    $query3="INSERT INTO userlinks(LinkID, UserID, Link) VALUES ('$LinkID','$ID','Add your contact links')";
 
-                //echo "<script>window.location.href='login.php';</script>";
+                    mysqli_query($con,$query);
+                    mysqli_query($con,$query2);
+                    mysqli_query($con,$query3);
 
-                
-                //echo '<div> <div id="liveAlertPlaceholder"></div> <div>';
+                    //echo "<script>window.location.href='login.php';</script>";
 
-                //die;
+                    
+                    //echo '<div> <div id="liveAlertPlaceholder"></div> <div>';
+
+                    //die;
+                }
+                else{
+                    echo "<script>window.location.href='register.php?user-already-exists';</script>";
+                }
             }
             else{
                 echo "Password mismatch";
