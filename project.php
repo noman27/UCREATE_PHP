@@ -36,7 +36,7 @@
                         <h5 class="subjectTitle">Hardware and Robotics</h3>
                         <p class="description">Devices and Robots created by talented hardware engineers</p>
                         <img src="images/hardware4.png" alt="roboticsnhard">
-                        <Button class="clickHere">Click Here</Button>
+                        <a href="hardthumbnail.php"><Button class="clickHere">Click Here</Button></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -44,7 +44,8 @@
                         <h5 class="subjectTitle">Arts</h3>
                         <p class="description">Paintings,sculptures,short stories,novels, comics <br> and <br> other unique creations</p>
                         <img src="images/arts3.png" alt="arts">
-                        <Button class="clickHere">Click Here</Button>
+                        <a href="artthumbnail.php"><Button class="clickHere">Click Here</Button></a>
+
                     </div>
                 </div>   
             </div>

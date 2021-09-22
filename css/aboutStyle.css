@@ -1,17 +1,8 @@
-.circle{  
-    background-color: #f8f402;  
-    width: 65px;
-    height: 65px;
-    line-height: 60px;
-    border-radius: 100%;
-	margin-left: auto;
-    margin-right: auto;
-	margin-top: -35px;
-}
 
 .third{	
-    background-color:#f8f402; 
-	height : 0px ;	
+    background-color:#ede7ec; 
+	height: 1215px;
+	border-style: none;	
 }
 
 .third .container{ 	
@@ -21,53 +12,56 @@
 .third .container .row{
  	row-gap:25px;	
 }
-
+h4{
+	margin-bottom: 0px;
+}
 .third .container .row .grid .grid1{  
 	display:grid;
-	height: 350px;  
+	height: 250px;  
 	width: 350px;
 	padding: 40px 30px;
-	border-style:solid;
-	border-color:black;
 	text-align:center;
 	color:black;   
+	margin: 0 0 0 0;
 }
-
+.third .container .row .grid .grid1-2{  
+	display:grid;
+	height: 350px;  
+	width: 600px;
+	padding: 40px 30px;
+	text-align:start;
+	color:black;   
+}
 .third .container .row .grid .grid2{ 
-    background: url("../images/grid3.jpg")no-repeat center;
-    height: 350px;  
-    width: 350px;
+    background: url("../images/at.png")no-repeat center;
+    height: 1200px;  
+    width: 1270px;
     background-size: cover;  
 }
 
 .third .container .row .grid .grid3{  
 	display:grid;
 	height: 350px;  
-	width: 350px;
+	width: 1200px;
 	border-style:solid;
-	border-color:black;
-	text-align:center;
+	border-color:rgb(245, 248, 205);
+	background-color: rgb(245, 248, 205);
+	text-align:start;
 	color:black;
 	padding: 40px 30px;
 }
 
-.third .container .row .grid .grid4{  
-    background: url("../images/grid2.jpg")no-repeat center;
-	background-size: cover;
-    height: 350px;  
-    width: 350px;;
-}
 
 .third .container .row .grid .grid5{  
 	display:grid;
 	border-style:solid;
-	border-color:black;
+	border-color:rgb(245, 248, 205);
 	padding: 60px 30px;
-	text-align:center;
-	color:white;
-	background :black;
+	text-align:start;
+	color:rgb(0, 0, 0);
+	background :rgb(245, 248, 205);
 	height: 350px;  
-	width: 350px;
+	width: 1200px;
 }
 
 .third .container .row .grid .grid6{ 
