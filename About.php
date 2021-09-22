@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" >   
     <link rel = "icon" type = "images/png" href = "images/logo_icon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/aboutStyle.css">
     <link rel="stylesheet" href="css/f_style.css">
+	<link rel="stylesheet" type="text/css" href="css/aboutStyle.css"> 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     
 
