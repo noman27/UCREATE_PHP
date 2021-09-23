@@ -63,37 +63,80 @@
  }
 
  function profileDataGet($con,$id){
-      $query="SELECT * from users where UserID = ?";
-      $query2="SELECT * FROM profile WHERE UserID = ?";
-      $query3="SELECT * FROM userlinks WHERE UserID = ?";
+   $sql="SELECT * FROM users WHERE UserID = ?";
+   $stmt=mysqli_stmt_init($con);
+   
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+     header("location:../login.php?error=stmtfailed");
+     exit();
+   }
+   
+   mysqli_stmt_bind_param($stmt,"i",$id);
+   mysqli_stmt_execute($stmt);
 
-      $stmt=mysqli_stmt_init($con);
-      $stmt2=mysqli_stmt_init($con);
-      $stmt3=mysqli_stmt_init($con);
+   $resultData=mysqli_stmt_get_result($stmt);
 
-      if(!mysqli_stmt_prepare($stmt,$query) && !mysqli_stmt_prepare($stmt2,$query2) && !mysqli_stmt_prepare($stmt3,$query3)){
-         header("location:../profile.php?error=stmtfailed");
-         exit();
-       }
-      
-       mysqli_stmt_bind_param($stmt,"i",$id);
-       mysqli_stmt_bind_param($stmt2,"i",$id);
-       mysqli_stmt_bind_param($stmt3,"i",$id);
-       
-       mysqli_stmt_execute($stmt);
-       mysqli_stmt_execute($stmt2);
-       mysqli_stmt_execute($stmt3);
+   if($row=mysqli_fetch_assoc($resultData)){
+     return $row;
+   }
+   else{
+      $result=false;
+      return $result;
+   }
 
-       $resultData1=mysqli_stmt_get_result($stmt);
-       $resultData2=mysqli_stmt_get_result($stmt2);
-       $resultData3=mysqli_stmt_get_result($stmt3);
-
-       $users=mysqli_fetch_assoc($resultData1);
-       $profils=mysqli_fetch_assoc($resultData2);
-       $linkss=mysqli_fetch_assoc($resultData3);
-       mysqli_stmt_close($stmt);
-       
+   mysqli_stmt_close($stmt); 
  }
+
+ function profPicandBioGet($con,$id){
+   $sql="SELECT * FROM profile WHERE UserID = ?";
+   $stmt=mysqli_stmt_init($con);
+   
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+     header("location:../login.php?error=stmtfailed");
+     exit();
+   }
+   
+   mysqli_stmt_bind_param($stmt,"i",$id);
+   mysqli_stmt_execute($stmt);
+
+   $resultData=mysqli_stmt_get_result($stmt);
+
+   if($row=mysqli_fetch_assoc($resultData)){
+     return $row;
+   }
+   else{
+      $result=false;
+      return $result;
+   }
+
+   mysqli_stmt_close($stmt);
+ }
+
+ function linkzget($con,$id){
+   $sql="SELECT * FROM userlinks WHERE UserID = ?";
+   $stmt=mysqli_stmt_init($con);
+   
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+     header("location:../login.php?error=stmtfailed");
+     exit();
+   }
+   
+   mysqli_stmt_bind_param($stmt,"i",$id);
+   mysqli_stmt_execute($stmt);
+
+   $resultData=mysqli_stmt_get_result($stmt);
+
+   if($row=mysqli_fetch_assoc($resultData)){
+     return $row;
+   }
+   else{
+      $result=false;
+      return $result;
+   }
+
+   mysqli_stmt_close($stmt);
+ }
+
 
  function loginUser($con,$user,$pass){
    $userExists=uidExists($con,$user,$user);

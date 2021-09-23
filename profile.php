@@ -8,11 +8,25 @@ session_start();
     $profession='';
     $links='';
     $Bio='';
+    $profpic='';
 
     if(isset($_SESSION['UserID'])){
         $id=$_SESSION['UserID'];
-        // profileDataGet($con,$id);
+        
+        $userData=profileDataGet($con,$id);
+        $bio=profPicandBioGet($con,$id);
+        $linkz=linkzget($con,$id);
+        
+        $userName=$userData['Name'];
+        $profession=$userData['Profession'];
+        $links=$linkz['Link'];
+        $Bio=$bio['Bio'];
+        $profpic=$bio['ProfPicLink'];
 
+        if($profpic=='Add profile'){
+            $profpic='images/profilepic2.jpg';
+        }
+        
         // $userName=$users["UserName"];
         // $profession=$users["Profession"];
         // $Bio=$profils["Bio"];
@@ -38,7 +52,7 @@ session_start();
         <div class="container">
             <div class="profile-header">
                 <div class="profile-pic">
-                    <img src="images/img2.png" alt="" height="150px" width="150px">
+                   <?php echo "<img src='$profpic' alt='' height='150px' width='150px'>" ?> 
                 </div>
                 <div class="profileUsername">
                     <?php echo "<h3>$userName</h3>"; ?>  
