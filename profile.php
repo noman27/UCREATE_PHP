@@ -77,7 +77,7 @@ session_start();
                         <div class="profile-buttons">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a href=""><button>Edit Profile</button></a>
+                                    <a href="profileEdit.php"><button>Edit Profile</button></a>
                                 </div>
                             </div>
                             <div class="row">

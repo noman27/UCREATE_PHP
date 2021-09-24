@@ -59,3 +59,34 @@ textarea{
 textarea::placeholder{
     color: white;
 }
+
+form .Update{
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+form .Update input{
+    background-color: #44bd32;
+    transition: 0.3s all ease;
+}
+
+form .Update input:hover{
+    background-color: #2f8622;
+}
+
+.Cancel{
+    padding-bottom: 50px;
+}
+
+.Cancel button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #EA2027;
+    color: white;
+    transition: 0.3s all ease;
+}
+
+.Cancel button:hover{
+    background-color: #b11d22;
+}
