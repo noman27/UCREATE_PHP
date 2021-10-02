@@ -23,6 +23,11 @@
     exit();
  }
 
+ function projectIdGenarate(){
+    $id=4000+rand(0,999);
+    return $id;
+ }
+
  function IdGenarate(){
     $id=1000+rand(0,999);
     return $id;

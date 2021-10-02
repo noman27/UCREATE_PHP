@@ -83,6 +83,12 @@ input{
 .tags li {
   float: left; 
 }
+.tags input{
+  min-height: 20px;
+	min-width:  20px;
+	font-size:  40px;
+	margin-left:none;
+}
 
 .tag {
   background: #eee;

@@ -1,6 +1,40 @@
 <?php 
-	$title='';
-	
+session_start();
+	include ("connect.php");
+	include ("function.php");	
+
+	if($_SERVER['REQUEST_METHOD']=='POST' && isset($_SESSION['UserID'])){
+		$uniquesavename=time().uniqid(rand());
+		$destination="projectScreenshots/";
+        $destination_file1=$destination.$uniquesavename."_".basename($_FILES['image_uploads']['name']);
+		move_uploaded_file($_FILES['image_uploads']['tmp_name'],$destination_file1);
+
+		$uniquesavename=time().uniqid(rand());
+		$destination="projectScreenshots/";
+        $destination_file2=$destination.$uniquesavename."_".basename($_FILES['image_uploads']['name']);
+		move_uploaded_file($_FILES['image_uploads2']['tmp_name'],$destination_file2);
+
+		$uniquesavename=time().uniqid(rand());
+		$destination="projectScreenshots/";
+        $destination_file3=$destination.$uniquesavename."_".basename($_FILES['image_uploads']['name']);
+		move_uploaded_file($_FILES['image_uploads3']['tmp_name'],$destination_file3);
+
+		$radioVal=$_POST["MyRadio"];
+		$link=$_POST["linkname"];
+		$title=$_POST["titlename"];
+		$des=$_POST["desc"];
+		$id=$_SESSION["UserID"];
+		$projid=projectIdGenarate();
+
+		$query="INSERT INTO project(ProjectID, UserID, Title, Description, ScreenShotOne, ScreenShotTwo, ScreenShotThree, Link, Type) VALUES ('$projid','$id','$title','$des','$destination_file1','$destination_file2','$destination_file3','$link','$radioVal') ";
+		mysqli_query($con,$query);
+		echo "<script>window.location.href='softUpload.php?$title';</script>";
+		
+	}
+	else{
+		
+	}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,20 +61,20 @@
 			<form class="midbody" action="#" method="POST" enctype="multipart/form-data">
 			 <div class="mb-3">
                    <span class="details">Project Title :</span> 
-                   <input type="text" placeholder="Title of your project" name="title-name" required>
+                   <input type="text" placeholder="Title of your project" name="titlename" required>
 				     <p> </p>
               </div> 
 			  <div class="mb-3">
                    <span class="details">Link :</span>
-                   <input type="text" placeholder="Link of your project" name="link-name" required>	 
+                   <input type="text" placeholder="Link of your project" name="linkname" required>	 
               </div>
 				
 			  <div class="genre">
 				<h2>Project type :</h2>
 				<ul class="tags">
-				  <li><a href="#" class="tag">Software</a></li>
-				  <li><a href="#" class="tag">Hardware</a></li>
-				  <li><a href="#" class="tag">Arts</a></li>
+				  <li><input type="radio" name="MyRadio" value="software" checked class="tag">Software</li>
+				  <li><input type="radio" name="MyRadio" value="hardware" class="tag">Hardware</li>
+				  <li><input type="radio" name="MyRadio" value="art"  class="tag">Arts</li>
 				</ul>
 				</div>
 				<div class="description">
@@ -51,8 +85,9 @@
 					<ul>
 					<li><input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple></li>
 					<li><input type="file" id="image_uploads2" name="image_uploads2" accept=".jpg, .jpeg, .png" multiple></li>
+					<li><input type="file" id="image_uploads3" name="image_uploads3" accept=".jpg, .jpeg, .png" multiple></li>
 					</ul>
-					<a href=""><button type="submit" >Upload</button></a>
+					<button type="submit" >Upload</button>
 
 				</div>		
 			

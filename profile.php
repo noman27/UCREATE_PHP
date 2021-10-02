@@ -82,7 +82,7 @@ session_start();
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a href=""><button>ADD PROJECT</button></a>
+                                    <a href="softUpload.php"><button>ADD PROJECT</button></a>
                                 </div>
                             </div>
                             <div class="row">
