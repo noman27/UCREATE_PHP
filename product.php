@@ -1,3 +1,25 @@
+<?php 
+session_start();
+	include 'connect.php';
+	include 'function.php';
+	$prID=$_GET['productID'];
+	
+	$projectDetails=projectGet($con,$prID);
+	$userID=$projectDetails['UserID'];
+	$title=$projectDetails['Title'];
+	$desc=$projectDetails['Description'];
+	$ss1=$projectDetails['ScreenShotOne'];
+	$ss2=$projectDetails['ScreenShotTwo'];
+	$ss3=$projectDetails['ScreenShotThree'];
+	$link=$projectDetails['Link'];
+
+	$userData=profileDataGet($con,$userID);
+	$userName=$userData['Name'];
+
+	$bio=profPicandBioGet($con,$userID);
+	$profpic=$bio['ProfPicLink'];
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +46,7 @@
 
     <div class="container">
 		<div class="product-title">
-			<p>Product Title</p>
+		   	<?php echo "<p>$title</p>"; ?> 
 		</div>
 		<!------------------slider------------------------->
 		
@@ -36,12 +58,16 @@
 			
 			<div class="carousel-inner">
 			<div class="item active">
-			 <img src="images/rtx.png" alt="">
+			  <?php echo "<img src=$ss1 height='1000' width='1000' alt=''>"; ?> 
 			</div>
 
 			<div class="item">
-			  <img src="images/rtx2.png" alt="">
+			   <?php echo "<img src=$ss2 height='1000' width='1000' alt=''>"; ?>
 			</div>
+			<div class="item">
+			   <?php echo "<img src=$ss3 height='1000' width='1000' alt=''>"; ?>
+			</div>
+
 		  </div>
 		  
 		   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -57,9 +83,7 @@
 		
 		<div class="product-discription">
 			<p class="idea"> Idea :</p>
-			<p class="des">asbavgsd tgvsaygbduy asgbdaduyh auidhyuahdsuha asbavgsd tgvsaygbduy 
-			asgbdaduyh auidhyuahdsuhaasbavgsd tgvsaygbduy asgbdaduyh 
-			auidhyuahdsuhaasbavgsd tgvsaygbduy asgbdaduyh auidhyuahdsuha</p>
+			<?php echo "<p class='des'>$desc</p>"; ?>
 		</div>
 			<div class="product-link">
 			<p>Link :</p>
@@ -72,11 +96,11 @@
 					<div class="col-md-8">	
 						
 						<div class="picture">
-								<img src="images/arts3.png"  alt="...">
+								<?php echo "<img src='$profpic' height='150px' width='150px' alt='...'>" ?>
 						</div>
 					
 					
-                        <p class="User-name">xyz saghdvga</p>
+                        <?php echo "<p class='User-name'>$userName</p>"; ?>
 						<!------------------------------------------>
 							<div class="wrapper">
 							<div class="button">

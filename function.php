@@ -164,4 +164,38 @@
 
  }
 
+ function allProjectGet($con,$type){
+   $sql="SELECT * FROM project WHERE Type = ?";
+   $stmt=mysqli_stmt_init($con);
+   
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+      header("location:../login.php?error=stmtfailed");
+      exit();
+   }
+   
+   mysqli_stmt_bind_param($stmt,"s",$type);
+   mysqli_stmt_execute($stmt);
 
+   $resultData=mysqli_stmt_get_result($stmt);
+   return $resultData;
+
+ }
+
+ function projectGet($con,$id){
+   $sql="SELECT * FROM project WHERE ProjectID = ?";
+   $stmt=mysqli_stmt_init($con);
+   
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+      header("location:../login.php?error=stmtfailed");
+      exit();
+   }
+   
+   mysqli_stmt_bind_param($stmt,"i",$id);
+   mysqli_stmt_execute($stmt);
+
+   $resultData=mysqli_stmt_get_result($stmt);
+   if($row=mysqli_fetch_assoc($resultData)){
+      return $row;
+   }
+
+ }

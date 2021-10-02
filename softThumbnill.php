@@ -1,5 +1,12 @@
 <?php 
 session_start();
+  include 'connect.php';
+  include 'function.php';
+
+  $type="software";
+  
+  $rs=allProjectGet($con,$type);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,8 +20,9 @@ session_start();
     <link rel = "icon" type = "images/png" href = "images/logo_icon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/f_style.css">
-	    <link rel="stylesheet" href="css/t_style.css">
+	   
     <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
      
 </head>
@@ -40,12 +48,12 @@ session_start();
   
   <div class="image-wrapper">
     <?php
-      for($i=0;$i<9;$i++){
+      while($row=mysqli_fetch_assoc($rs)){
        echo  "<div class='media'>
                 <div class='overlay'></div>
-                <img src='https://i.postimg.cc/rsd9NmsW/pic-11.png' alt=''>
+                <img src='$row[ScreenShotOne]' alt='Projectthumbnail'>
                 <div class='image-details'>
-                  <p>Image $i</p>
+                  <a href='product.php?productID=$row[ProjectID]'><p>Project :$row[Title]</p></a>
                 </div>
               </div>";
       }
