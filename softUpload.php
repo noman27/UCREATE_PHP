@@ -1,3 +1,7 @@
+<?php 
+	$title='';
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,10 +32,10 @@
               </div> 
 			  <div class="mb-3">
                    <span class="details">Link :</span>
-                   <input type="text" placeholder="Link of your project" name="link-name" required>
-				 
+                   <input type="text" placeholder="Link of your project" name="link-name" required>	 
               </div>
-				<div class="genre">
+				
+			  <div class="genre">
 				<h2>Project type :</h2>
 				<ul class="tags">
 				  <li><a href="#" class="tag">Software</a></li>
@@ -40,7 +44,7 @@
 				</ul>
 				</div>
 				<div class="description">
-				<textarea placeholder="Say something about your project" class="field"></textarea>
+				<textarea placeholder="Say something about your project" class="field" name="desc"></textarea>
 				</div>
 				<h4>Upload your projects picture</h4>
 				<div class="ss-upload"
