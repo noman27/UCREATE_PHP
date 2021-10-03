@@ -1,5 +1,12 @@
 <?php
 session_start();
+	include 'connect.php';
+	include 'function.php';
+
+	$det=aboutget($con);
+	$head=$det['head'];
+	$strat=$det['strat'];
+	$mission=$det['mission'];
 
 ?>
 <!DOCTYPE html>
@@ -42,7 +49,7 @@ session_start();
 				<div class="col-md-6">
 					<div class="grid">
 						<div class="grid1-2">	
-						<p style="font-size:24px; font-weight:500;">Good content is everything.In a world that is oversaturated with content,you'll learn from successfull writers and bloggers how to create content that matters and resonates with your audiences</p>
+						<?php echo "<p style='font-size:24px; font-weight:500;'>$head</p>";?>
 						</div>
 					</div>
 				</div> 					
@@ -56,7 +63,7 @@ session_start();
 					<div class="grid">
 						<div class="grid3">	
 							<h4 style="font-size:28px; font-weight:700;">Our Strategy</h4>
-							<p style="font-size:19px; font-weight:500;">Sometimes the hardest part is knowing what to say and when to say it.At Lines,you'll get the downlow on how to craft retweetable massages,when to post content,and what platforms you should be using</p>
+							<?php echo	"<p style='font-size:19px; font-weight:500;'>$strat</p>";?>
 						</div>
 					</div>
 				</div> 										
@@ -64,7 +71,7 @@ session_start();
 					<div class="grid">			
 						<div class="grid5">	
 							<h4 style="font-size:28px; font-weight:700;">Our Mission</h4>
-							<p style="font-size:19px; font-weight:500;">Good content is everything.In a world that is oversaturated with content,you'll learn from successfull writers and bloggers how to create content that matters and resonates with your audiences</p>
+							<?php echo	"<p style='font-size:19px; font-weight:500;'>$mission</p>"; ?>
 						</div>
 					</div>
 				</div> 							 				
