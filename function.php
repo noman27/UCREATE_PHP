@@ -42,6 +42,11 @@
     $id=3000+rand(0,999);
     return $id;
  }
+
+ function msgIdGenarate(){
+   $id=6000+rand(0,999);
+   return $id;
+}
  
  function uidExists($con,$username,$email){
     $sql="SELECT * FROM users WHERE UserName = ? OR Email = ?";
@@ -130,16 +135,16 @@
    mysqli_stmt_execute($stmt);
 
    $resultData=mysqli_stmt_get_result($stmt);
+   return $resultData;
+   // if($row=mysqli_fetch_assoc($resultData)){
+   //   return $row;
+   // }
+   // else{
+   //    $result=false;
+   //    return $result;
+   // }
 
-   if($row=mysqli_fetch_assoc($resultData)){
-     return $row;
-   }
-   else{
-      $result=false;
-      return $result;
-   }
-
-   mysqli_stmt_close($stmt);
+   //mysqli_stmt_close($stmt);
  }
 
 
@@ -197,5 +202,22 @@
    if($row=mysqli_fetch_assoc($resultData)){
       return $row;
    }
+
+ }
+
+ function myprojectGet($con,$id){
+   $sql="SELECT * FROM project WHERE UserID = ?";
+   $stmt=mysqli_stmt_init($con);
+   
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+      header("location:../login.php?error=stmtfailed");
+      exit();
+   }
+   
+   mysqli_stmt_bind_param($stmt,"i",$id);
+   mysqli_stmt_execute($stmt);
+
+   $resultData=mysqli_stmt_get_result($stmt);
+   return $resultData;
 
  }

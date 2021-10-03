@@ -59,13 +59,15 @@ body{
 
 .profile-links{
     color: white;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 20px;
+    padding-right: 5px;
 }
 
 .profile-links ul li{
-    list-style: none;
+    list-style-type: circle;
+    padding-right: 5px;
 }
 
 .linker{
@@ -108,7 +110,7 @@ body{
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 100px;
-    width: 1050px;
+    width: 1030px;
     height: 1000px;
     color: white;
 }

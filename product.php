@@ -12,6 +12,7 @@ session_start();
 	$ss2=$projectDetails['ScreenShotTwo'];
 	$ss3=$projectDetails['ScreenShotThree'];
 	$link=$projectDetails['Link'];
+	$date=$projectDetails['Date'];
 
 	$userData=profileDataGet($con,$userID);
 	$userName=$userData['Name'];
@@ -50,7 +51,7 @@ session_start();
 		</div>
 		<div class="publishDate">
 					<p class="publishedOn">Published On:</p>
-					<p class="date">01/05/2020</p>
+					<?php echo "<p class='date'>$date</p>" ?>
 		</div>	
 		
 		<!------------------slider------------------------->
@@ -63,14 +64,14 @@ session_start();
 			
 			<div class="carousel-inner">
 				<div class="item active">
-				  <?php echo "<img src=$ss1 height='1000' width='1000' alt=''>"; ?> 
+				  <?php echo "<img src=$ss1   alt=''>"; ?> 
 				</div>
 
 				<div class="item">
-				   <?php echo "<img src=$ss2 height='1000' width='1000' alt=''>"; ?>
+				   <?php echo "<img src=$ss2  alt=''>"; ?>
 				</div>
 				<div class="item">
-				   <?php echo "<img src=$ss3 height='1000' width='1000' alt=''>"; ?>
+				   <?php echo "<img src=$ss3  alt=''>"; ?>
 				</div>
 
 			</div>

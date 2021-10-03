@@ -23,9 +23,10 @@ session_start();
             if($password==$cpassword){
                 $destination_file=$destination.basename($_FILES['userimage']['name']);
                 move_uploaded_file($_FILES['userimage']['tmp_name'],$destination_file);
+                $LinkID=LinkIdGenarate();
                 
                 $query1="UPDATE profile SET Bio='$Bio',ProfPicLink='$destination_file' WHERE UserID='$id' ";
-                $query2="UPDATE userlinks SET Link='$Links' WHERE UserID='$id' ";
+                $query2="INSERT INTO userlinks(LinkID, UserID, Link) VALUES ('$LinkID','$id','$Links')";
                 $query3="UPDATE users SET Name='$fullName', UserName='$userName', Email='$uEmail', Password='$cpassword', Profession='$profession' WHERE UserID='$id' ";
 
                 mysqli_query($con,$query1);

@@ -19,7 +19,7 @@ session_start();
         
         $userName=$userData['Name'];
         $profession=$userData['Profession'];
-        $links=$linkz['Link'];
+        
         $Bio=$bio['Bio'];
         $profpic=$bio['ProfPicLink'];
 
@@ -31,6 +31,8 @@ session_start();
         // $profession=$users["Profession"];
         // $Bio=$profils["Bio"];
         // $links=$linkss["Link"];
+        $rs=myprojectGet($con,$id);
+
     }
     else{
         $userName='User Name';
@@ -69,7 +71,11 @@ session_start();
                         <div class="profile-links">
                             <h5>LINKS:</h5>
                             <ul>
-                                <?php echo "<li><a href='$links' class='linker'>$links</a></li>" ?>
+                                <?php 
+                                    while($row=mysqli_fetch_assoc($linkz)) {
+                                        echo "<li><a href='$row[Link]' class='linker'>$row[Link]</a></li>";
+                                    } 
+                                ?>
                             </ul>
                         </div>
                         <div class="profile-bio">
@@ -96,15 +102,15 @@ session_start();
                     </div>
                    <div class="midbody"> 
                         <div class="recent-projects">
-                            <h3>Recent Projects</h3> 
+                            <h3>My Projects</h3> 
                                 <div class="image-wrapper">
                                     <?php
-                                        for($i=0 ; $i < 5;$i++){
+                                        while($row=mysqli_fetch_assoc($rs)){
                                             echo  "<div class='media'>
                                             <div class='overlay'></div>
-                                            <img src='images/grid2.jpg' alt=''>
+                                            <img src='$row[ScreenShotOne]' alt=''>
                                             <div class='image-details'>
-                                            <a href='#'><p>Project :$i</p></a>
+                                            <a href='product.php?productID=$row[ProjectID]'><p>Project :$row[Title]</p></a>
                                             </div>
                                             </div>";
                                         }

@@ -1,5 +1,22 @@
 <?php 
 session_start();
+	include 'connect.php';
+	include 'function.php';
+
+	if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST)){
+		$id=msgIdGenarate();
+		$Name=$_POST['name'];
+		$Email=$_POST['email'];
+		$Phone=$_POST['phn'];
+		$messege=$_POST['massege'];
+		$date = date('d/m/Y', time());
+		
+		$query="INSERT INTO massege(msgID, name, email, phn, messege, date) VALUES ('$id','$Name','$Email','$Phone','$messege','$date')";
+		mysqli_query($con,$query);
+		
+		//echo "<script>window.location.href='contactUs.php?$date';</script>";
+	}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,14 +49,16 @@ session_start();
 	<div class="container">
 		<div class="contact-box">
 			<div class="left"></div>
-			<div class="right">
-				<h2>Contact Us</h2>
-				<input type="text" class="field" placeholder="Your Name">
-				<input type="text" class="field" placeholder="Your Email">
-				<input type="text" class="field" placeholder="Phone">
-				<textarea placeholder="Message" class="field"></textarea>
-				<button class="btn">Send</button>
-			</div>
+			<form action="" method="POST">
+				<div class="right">
+					<h2>Contact Us</h2>
+					<input type="text" class="field" name="name"  placeholder="Your Name">
+					<input type="text" class="field" name="email" placeholder="Your Email">
+					<input type="text" class="field" name="phn"   placeholder="Phone">
+					<textarea placeholder="Message"  name="massege" class="field"></textarea>
+					<button type="submit" class="btn">Send</button>
+				</div>
+			</form>
 		</div>
 	</div>
 

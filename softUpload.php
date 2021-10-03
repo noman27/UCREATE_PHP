@@ -19,14 +19,15 @@ session_start();
         $destination_file3=$destination.$uniquesavename."_".basename($_FILES['image_uploads']['name']);
 		move_uploaded_file($_FILES['image_uploads3']['tmp_name'],$destination_file3);
 
-		$radioVal=$_POST["MyRadio"];
+		$radioVal=$_POST["select"];
 		$link=$_POST["linkname"];
 		$title=$_POST["titlename"];
 		$des=$_POST["desc"];
 		$id=$_SESSION["UserID"];
 		$projid=projectIdGenarate();
+		$date = date('d/m/Y', time());
 
-		$query="INSERT INTO project(ProjectID, UserID, Title, Description, ScreenShotOne, ScreenShotTwo, ScreenShotThree, Link, Type) VALUES ('$projid','$id','$title','$des','$destination_file1','$destination_file2','$destination_file3','$link','$radioVal') ";
+		$query="INSERT INTO project(ProjectID, UserID, Title, Description, ScreenShotOne, ScreenShotTwo, ScreenShotThree, Link, Type,Date) VALUES ('$projid','$id','$title','$des','$destination_file1','$destination_file2','$destination_file3','$link','$radioVal','$date') ";
 		mysqli_query($con,$query);
 		echo "<script>window.location.href='softUpload.php?$title';</script>";
 		
@@ -74,9 +75,9 @@ session_start();
 					<h2>Project type :</h2>
 				<!------------------------------------->
 				<div class="box">
-						<input type="radio" name="select" id="option-1">
-						<input type="radio" name="select" id="option-2">
-						<input type="radio" name="select" id="option-3">
+						<input type="radio" name="select" id="option-1" value="software">
+						<input type="radio" name="select" id="option-2" value="hardware">
+						<input type="radio" name="select" id="option-3" value="arts">
 						
 						<label for="option-1" class="option-1">
 							
