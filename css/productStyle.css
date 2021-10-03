@@ -28,13 +28,19 @@ h3{
 	position: relative;
 }
 .product-title{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 	padding:15px;
   font-size: 54px;
 }
 .product-link{
+  text-align: start;
 	margin-top:25px;
-	margin-left: 25%;
   font-size: 34px;
+  
+}
+.product-link a{
+  color: #000;
 }
 .container .product-discription{
 	
@@ -71,10 +77,29 @@ margin-top:25px;
 }
 
 
-.picture img{
-    border-radius: 50%;
+.user-info .picture{
+  height:150px;
+  width: 150px;
+  text-align: center right;
+  display: block;
+  margin-left: 15%;
+}
+.user-info .picture img{
+  height:150px;
+  width: 150px;
+  text-align: center right;
+  display: block;
+  border-radius: 50%;
 }
 
+
+.publishDate p {
+  font-size: 24px;
+  margin-left: 25px;
+  float: left;
+  text-align: start;
+  margin-left: 25px;
+}
 
 
 

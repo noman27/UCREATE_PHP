@@ -51,8 +51,9 @@ session_start();
 </head>
 <body>
   	
-			<div class = "instruction"> <h3> What are you working on?</h3>
-			<p>Upload your design. This will also be used as the thumbnail in feeds.<p>
+			<div class = "instruction">
+				 <h3> What are you working on?</h3>
+				<p>Upload your design. This will also be used as the thumbnail in feeds.<p>
 			</div>
 			
 			
@@ -60,27 +61,46 @@ session_start();
 		<div class="file__upload">
 			<form class="midbody" action="#" method="POST" enctype="multipart/form-data">
 			 <div class="mb-3">
-                   <span class="details">Project Title :</span> 
-                   <input type="text" placeholder="Title of your project" name="titlename" required>
-				     <p> </p>
+                   			<span class="details">Project Title :</span> 
+                  			<input type="text" placeholder="Title of your project" name="titlename" required>
+				     		<p> </p>
               </div> 
 			  <div class="mb-3">
                    <span class="details">Link :</span>
                    <input type="text" placeholder="Link of your project" name="linkname" required>	 
               </div>
 				
-			  <div class="genre">
-				<h2>Project type :</h2>
-				<ul class="tags">
-				  <li><input type="radio" name="MyRadio" value="software" checked class="tag">Software</li>
-				  <li><input type="radio" name="MyRadio" value="hardware" class="tag">Hardware</li>
-				  <li><input type="radio" name="MyRadio" value="art"  class="tag">Arts</li>
-				</ul>
+			  	<div class="genre">
+					<h2>Project type :</h2>
+				<!------------------------------------->
+				<div class="box">
+						<input type="radio" name="select" id="option-1">
+						<input type="radio" name="select" id="option-2">
+						<input type="radio" name="select" id="option-3">
+						
+						<label for="option-1" class="option-1">
+							
+							<div class="dot"></div>
+							<div class="text">Software</div>
+						</label>
+						<label for="option-2" class="option-2">
+							
+							<div class="dot"></div>
+							<div class="text">Hardware</div>
+						</label>
+						<label for="option-3" class="option-3">
+							
+							<div class="dot"></div>
+							<div class="text">Arts</div>
+						</label>
+					
+    			  </div>
 				</div>
 				<div class="description">
-				<textarea placeholder="Say something about your project" class="field" name="desc"></textarea>
+					<textarea placeholder="Say something about your project" class="field" name="desc"></textarea>
 				</div>
-				<h4>Upload your projects picture</h4>
+					<h4>Upload your projects picture</h4>
+					<h5>1280x720px or higher is recommended.<p>ps : The 1st choosen image, will be your thumbnail image</h5> 
 				<div class="ss-upload"
 					<ul>
 					<li><input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple></li>

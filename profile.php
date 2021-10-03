@@ -46,7 +46,9 @@ session_start();
         <title>UCREATE | User profile</title>
         <link rel = "icon" type = "images/png" href = "images/logo_icon.png">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/t_style.css">
         <link rel="stylesheet" href="css/profile.css">
+
     </head>
     <body>
         <div class="container">
@@ -92,11 +94,24 @@ session_start();
                             </div>
                         </div>
                     </div>
-                
-                    <div class="recent-projects">
-                        <h3>Recent Projects</h3> 
-                    </div>
-
+                   <div class="midbody"> 
+                        <div class="recent-projects">
+                            <h3>Recent Projects</h3> 
+                                <div class="image-wrapper">
+                                    <?php
+                                        for($i=0 ; $i < 5;$i++){
+                                            echo  "<div class='media'>
+                                            <div class='overlay'></div>
+                                            <img src='images/grid2.jpg' alt=''>
+                                            <div class='image-details'>
+                                            <a href='#'><p>Project :$i</p></a>
+                                            </div>
+                                            </div>";
+                                        }
+                                        ?>
+                                </div>
+                        </div>
+                    </div>                      
                 </div>
             
         </div>

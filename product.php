@@ -48,6 +48,11 @@ session_start();
 		<div class="product-title">
 		   	<?php echo "<p>$title</p>"; ?> 
 		</div>
+		<div class="publishDate">
+					<p class="publishedOn">Published On:</p>
+					<p class="date">01/05/2020</p>
+		</div>	
+		
 		<!------------------slider------------------------->
 		
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -57,18 +62,18 @@ session_start();
 			</ol>
 			
 			<div class="carousel-inner">
-			<div class="item active">
-			  <?php echo "<img src=$ss1 height='1000' width='1000' alt=''>"; ?> 
-			</div>
+				<div class="item active">
+				  <?php echo "<img src=$ss1 height='1000' width='1000' alt=''>"; ?> 
+				</div>
 
-			<div class="item">
-			   <?php echo "<img src=$ss2 height='1000' width='1000' alt=''>"; ?>
-			</div>
-			<div class="item">
-			   <?php echo "<img src=$ss3 height='1000' width='1000' alt=''>"; ?>
-			</div>
+				<div class="item">
+				   <?php echo "<img src=$ss2 height='1000' width='1000' alt=''>"; ?>
+				</div>
+				<div class="item">
+				   <?php echo "<img src=$ss3 height='1000' width='1000' alt=''>"; ?>
+				</div>
 
-		  </div>
+			</div>
 		  
 		   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span>
@@ -87,6 +92,7 @@ session_start();
 		</div>
 			<div class="product-link">
 			<p>Link :</p>
+			<?php echo "<a href='$link'><p class='linkDes'>$link</p> </a>"; ?>
 			
 		</div>
 			<a href="#"><button class="pre-btn">Previous</button></a>

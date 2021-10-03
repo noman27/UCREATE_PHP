@@ -46,6 +46,10 @@ session_start();
 						<div class="grid4">	
 						</div>
                         <h3 class="title">Noman</h3>
+						<h4 class="description">
+							Ahsanullah University of Science and Technology
+							<p>3rd year,1st Semester</p>
+							<p>Fall,2020</p></h4>						
 						<!--------------------------------------->
                          <div class="wrapper">
 						<div class="button">
@@ -71,6 +75,10 @@ session_start();
 						<div class="grid6">	
 						</div>
                         <h3 class="title">Sadee</h3>
+						<h4 class="description">
+							Ahsanullah University of Science and Technology
+							<p>3rd year,1st Semester</p>
+							<p>Fall,2020</p></h4>
 						<!------------------------------------------>
                         <div class="wrapper">
 						<div class="button">
