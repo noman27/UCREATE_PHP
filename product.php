@@ -107,7 +107,7 @@ session_start();
 						</div>
 					
 					
-                        <?php echo "<p class='User-name'>$userName</p>"; ?>
+                        <?php echo "<a class='linc' href='projectOwner.php?u=$userID&p=$prID'><p class='User-name'>$userName</p></a>"; ?>
 						<!------------------------------------------>
 							<div class="wrapper">
 							<div class="button">

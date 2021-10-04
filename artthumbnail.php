@@ -1,5 +1,12 @@
 <?php 
 session_start();
+  include 'connect.php';
+  include 'function.php';
+
+  $type="arts";
+
+  $rs=allProjectGet($con,$type);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,15 +48,15 @@ session_start();
    
   <div class="image-wrapper">
   <?php
-      for($i=0;$i<8;$i++){
-       echo  "<div class='media'>
-                <div class='overlay'></div>
-                <img src='https://i.postimg.cc/rsd9NmsW/pic-11.png' alt=''>
-                <div class='image-details'>
-                  <p>Image $i</p>
-                </div>
-              </div>";
-      }
+      while($row=mysqli_fetch_assoc($rs)){
+        echo  "<div class='media'>
+                 <div class='overlay'></div>
+                 <img src='$row[ScreenShotOne]' alt='Projectthumbnail'>
+                 <div class='image-details'>
+                   <a href='product.php?productID=$row[ProjectID]'><p>Project :$row[Title]</p></a>
+                 </div>
+               </div>";
+       }
     ?>
   </div>
 
