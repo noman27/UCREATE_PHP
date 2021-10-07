@@ -245,3 +245,19 @@
 
    mysqli_stmt_close($stmt);
  }
+
+ function allDevGet($con){
+  $sql="SELECT * FROM devteam";
+  $stmt=mysqli_stmt_init($con);
+  
+  if(!mysqli_stmt_prepare($stmt,$sql)){
+    header("location:../login.php?error=stmtfailed");
+    exit();
+  }
+  
+  mysqli_stmt_execute($stmt);
+
+  $resultData=mysqli_stmt_get_result($stmt);
+  return $resultData;
+  mysqli_stmt_close($stmt);
+ }

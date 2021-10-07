@@ -1,5 +1,12 @@
 <?php 
 session_start();
+
+include 'connect.php';
+include 'function.php';
+
+	$devDetail=allDevGet($con);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,72 +46,51 @@ session_start();
 						</div>
 					</div>
 				</div> 					
-			 						
-				<div class="col-md-4">
-					<div class="grid">
-                    <div class="our-team">			
-						<div class="grid4">	
+
+				<?php 
+					while($row=mysqli_fetch_assoc($devDetail)){
+					echo "<div class='col-md-4'>
+					<div class='grid'>
+                    <div class='our-team'>			
+						<div class='grid4'>
+							<img src='$row[pic]' alt=''>	
 						</div>
-                        <h3 class="title">Noman</h3>
-						<h4 class="description">
-							Ahsanullah University of Science and Technology
-							<p>3rd year,1st Semester</p>
-							<p>Fall,2020</p></h4>						
+                        <h3 class='title'>$row[name]</h3>
+						<h4 class='description'>
+							$row[workplace]
+							<p>$row[detailone]</p>
+							<p>$row[detailtwo]</p></h4>						
 						<!--------------------------------------->
-                         <div class="wrapper">
-						<div class="button">
+                         <div class='wrapper'>
+						<div class='button'>
   
-						<div class="icon"><i class="fab fa-facebook-f"></i></div>
+						<div class='icon'><i class='fab fa-facebook-f'></i></div>
 						<span>Facebook</span>
 						</div>
-						<div class="button">
-						<div class="icon"><i class="fab fa-twitter"></i></div>
+						<div class='button'>
+						<div class='icon'><i class='fab fa-twitter'></i></div>
 						<span>Twitter</span>
 						</div>
-						<div class="button">
-						<div class="icon"><i class="fab fa-instagram"></i></div>
+						<div class='button'>
+						<div class='icon'><i class='fab fa-instagram'></i></div>
 						<span>Instagram</span>
 						</div>
 						</div>
                         </div>  
 					</div>
-				</div> 					
-									
-				<div class="col-md-4">
-					<div class="our-team">			
-						<div class="grid6">	
-						</div>
-                        <h3 class="title">Sadee</h3>
-						<h4 class="description">
-							Ahsanullah University of Science and Technology
-							<p>3rd year,1st Semester</p>
-							<p>Fall,2020</p></h4>
-						<!------------------------------------------>
-                        <div class="wrapper">
-						<div class="button">
-  
-						<div class="icon"><i class="fab fa-facebook-f"></i></div>
-						<span>Facebook</span>
-						</div>
-						<div class="button">
-						<div class="icon"><i class="fab fa-twitter"></i></div>
-						<span>Twitter</span>
-						</div>
-						<div class="button">
-						<div class="icon"><i class="fab fa-instagram"></i></div>
-						<span>Instagram</span>
-						</div>
-						</div>
+					</div>";
+					}
 
-                        </div>  
-							</div>		
-									<div class="Text">	
-										<p>Hello ! It's nice to meet you. Hope you had a good run our website . If you have any query feel free to contact us! <p>
-										<p>We Will Love To Help and Learn !</p>		
-									</div>
-							</div>
+				?>
+								
+				<div class="Text">	
+					<p>Hello ! It's nice to meet you. Hope you had a good run our website . If you have any query feel free to contact us! <p>
+					<p>We Will Love To Help and Learn !</p>		
 				</div>
-				</div> 				
+
+			</div>
+		</div>
+	</div> 				
 			</div>	
 		</div>
 

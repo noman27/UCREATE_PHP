@@ -36,18 +36,18 @@
 	color:black;   
 }
 
-.grid6{  
+.grid6 img{  
    
-	background: url("../images/img2.png")no-repeat center;  
+	  
 	margin-top: 100px;
 	height: 350px;  
 	width: 350px;
 	background-size: cover;
 }
 
-.grid4{  
+.grid4 img{  
    
-	background: url("../images/noman2.jpg")no-repeat center;  
+	  
 	margin-top: 100px;
 	height: 350px;  
 	width: 350px;
